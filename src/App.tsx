@@ -2,6 +2,7 @@
 // import Message from "./Message";
 
 import ListGroup from "./Components/ListGroup";
+import Counter from "./Components/Counter";
 
 function App() {
   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
@@ -12,7 +13,8 @@ function App() {
 
   return (
     <div>
-      <ListGroup items={items} heading="Cities" onSelectItem={handleSelectItem} />
+      <Counter />
+      {/* <ListGroup items={items} heading="Cities" onSelectItem={handleSelectItem} /> */}
     </div>
   );
 }
