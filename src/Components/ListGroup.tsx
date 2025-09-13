@@ -10,6 +10,9 @@ interface Props {
   onSelectItem: (item: string) => void; // onClick
 }
 
+// props -> Input passed to a component just like arguments
+// state -> Data managed by a component
+
 function ListGroup({ items, heading, onSelectItem }: Props) {
   // items = [];
   // let selectedIndex = -1;
@@ -38,7 +41,7 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
         {items.length === 0 && <p>No item found</p>}
         {items.map((item, index) => (
           <li
-            className={
+            className={ 
               selectedIndex === index
                 ? "list-group-item active"
                 : "list-group-item"
