@@ -12,6 +12,10 @@ import "./App.css";
 import { BsFillCalendarFill } from "react-icons/bs";
 import Like from "./Like";
 import Message from "./Message";
+import NavBar from "./Components/NavBar";
+import Cart from "./Components/Cart";
+import ExpandableText from "./Components/ExpandableText";
+import { iteratorSymbol } from "immer/dist/internal";
 
 function App() {
   // let items = ["New York", "Los Angeles", "San Francisco"];
@@ -72,46 +76,105 @@ function App() {
   // };
   // console.log(tags);
 
-  const [bugs, setBugs] = useState([
-    { id: 1, title: "Bug 1", fixed: false },
-    { id: 2, title: "Bug 2", fixed: false },
-  ]);
+  // const [bugs, setBugs] = useState([
+  //   { id: 1, title: "Bug 1", fixed: false },
+  //   { id: 2, title: "Bug 2", fixed: false },
+  // ]);
 
-  const handleClick = () => {
-    // setBugs(bugs.map((bug) => (bug.id === 1 ? { ...bug, fixed: true } : bug)));
+  // const handleClick = () => {
+  //   // setBugs(bugs.map((bug) => (bug.id === 1 ? { ...bug, fixed: true } : bug)));
 
-    setBugs(
-      produce((draft) => {
-        const bug = draft.find((bug) => bug.id === 1);
-        if (bug) bug.fixed = true;
-      })
-    );
-  };
+  //   setBugs(
+  //     produce((draft) => {
+  //       const bug = draft.find((bug) => bug.id === 1);
+  //       if (bug) bug.fixed = true;
+  //     })
+  //   );
+  // };
+
+  // const [cartItems, setCartItems] = useState(["Product1", "Product2"]);
+
+  // const [game, setGame] = useState({
+  //   id: 1,
+  //   player: {
+  //     name: "John",
+  //   },
+  // });
+
+  // const handleClick = () => {
+  //   setGame({ ...game, player: { ...game.player, name: "Bob" } });
+  // };
+
+  // const [pizza, setPizza] = useState({
+  //   name: "Spicy Pepperoni",
+  //   toppings: ["Mushroom"],
+  // });
+
+  // const handleClick = () => {
+  //   setPizza({ ...pizza, toppings: [...pizza.toppings, "Cheese"] });
+  // };
+
+  // const [cart, setCart] = useState({
+  //   discount: 0.1,
+  //   items: [
+  //     { id: 1, title: "Product 1", quantity: 1 },
+  //     { id: 2, title: "Product 2", quantity: 1 },
+  //   ],
+  // });
+
+  // const handleClick = () => {
+  //   // setCart({
+  //   //   ...cart,
+  //   //   items: cart.items.map((item) =>
+  //   //     item.id === 2 ? { ...item, quantity: item.quantity + 1 } : item
+  //   //   ),
+  //   // });
+
+  //   setCart(
+  //     produce((draft) => {
+  //       let test = draft.items.find((item) => item.id === 2);
+
+  //       if (test) test.quantity += 1;
+  //       draft.discount += 1;
+  //     })
+  //   );
+  // };
 
   return (
     <div>
-      {bugs.map((bug) => (
+      <ExpandableText>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni iusto optio beatae error totam praesentium laboriosam amet a doloremque ipsa, illo rem voluptate vero veritatis deleniti ad cum eius cumque? Beatae fugiat saepe quo commodi, magnam incidunt dicta dolorem rem reprehenderit itaque dignissimos velit? Dolore, doloribus molestiae! Laborum aut ab itaque quos quisquam similique? Aspernatur, facilis ad sed autem a aliquam aliquid perspiciatis itaque placeat iste molestiae excepturi nobis incidunt voluptatum ipsam soluta omnis nam facere? Distinctio ea beatae unde cumque delectus corrupti nemo officiis inventore, dolor sapiente ut modi harum esse porro reiciendis, voluptatum atque quasi? Quam, inventore culpa!
+      </ExpandableText>
+      {/* {cart.items.map((item) => (
+        <li key={item.id}>
+          {item.title} {item.quantity}
+        </li>
+      ))}
+      {cart.discount}
+
+      <button onClick={handleClick}>Click</button> */}
+      {/* {pizza.toppings} */}
+      {/* <button onClick={handleClick}>Click Me</button> */}
+      {/* {game.player.name} */}
+      {/* <NavBar cartItemsCount={cartItems.length} />
+      <Cart cartItems={cartItems} onClear={() => setCartItems([])} /> */}
+      {/* {bugs.map((bug) => (
         <p key={bug.id}>
           {bug.title} {bug.fixed ? "Fixed" : "New"}
         </p>
       ))}
-      
-      <button onClick={handleClick}>Click Me</button>
 
+      <button onClick={handleClick}>Click Me</button> */}
       {/* <button onClick={handleClick}>Click Me</button> */}
-
       {/* {drink.price}
       <button onClick={handleClick}>Click Me</button> */}
-
       {/* <Message /> */}
-
       {/* {alertVisible && (
         <Alert onClose={() => setAlertVisibility(false)}>Alert!</Alert>
       )}
       <Button color="dark" onClick={() => setAlertVisibility(true)}>
         Hello World
       </Button> */}
-
       {/* <Alert>Alert!</Alert> */}
       {/* <BsFillCalendarFill  color="red" size={40}/>
       <ListGroup
@@ -120,7 +183,6 @@ function App() {
         onSelectItem={handleSelectItem}
       /> */}
       {/* <Button onClick={() => {}}>My Button</Button> */}
-
       {/* <Like onClick={() => console.log("clicked")} /> */}
     </div>
   );
