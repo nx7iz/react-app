@@ -16,6 +16,7 @@ import NavBar from "./Components/NavBar";
 import Cart from "./Components/Cart";
 import ExpandableText from "./Components/ExpandableText";
 import { iteratorSymbol } from "immer/dist/internal";
+import Form from "./Components/Form";
 
 function App() {
   // let items = ["New York", "Los Angeles", "San Francisco"];
@@ -142,9 +143,10 @@ function App() {
 
   return (
     <div>
-      <ExpandableText>
+      <Form />
+      {/* <ExpandableText>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni iusto optio beatae error totam praesentium laboriosam amet a doloremque ipsa, illo rem voluptate vero veritatis deleniti ad cum eius cumque? Beatae fugiat saepe quo commodi, magnam incidunt dicta dolorem rem reprehenderit itaque dignissimos velit? Dolore, doloribus molestiae! Laborum aut ab itaque quos quisquam similique? Aspernatur, facilis ad sed autem a aliquam aliquid perspiciatis itaque placeat iste molestiae excepturi nobis incidunt voluptatum ipsam soluta omnis nam facere? Distinctio ea beatae unde cumque delectus corrupti nemo officiis inventore, dolor sapiente ut modi harum esse porro reiciendis, voluptatum atque quasi? Quam, inventore culpa!
-      </ExpandableText>
+      </ExpandableText> */}
       {/* {cart.items.map((item) => (
         <li key={item.id}>
           {item.title} {item.quantity}
